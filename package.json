@@ -1,5 +1,5 @@
 {
-  "name": "node-authentication",
+  "name": "pass-coda",
   "main": "server.js",
   "dependencies": {
     "bcrypt-nodejs": "latest",
@@ -9,7 +9,7 @@
     "ejs": "~2.5.2",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "method-override": "~2.3.6",
     "mongodb": "^3.3.4",
     "mongoose": ">=5.7.5",
@@ -20,5 +20,26 @@
     "passport-google-oauth": "~1.0.0",
     "passport-local": "~1.0.0",
     "passport-twitter": "~1.0.4"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "-Learning how an simple CRUD APP works and user authentication",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjacobsdev/pass-coda.git"
+  },
+  "keywords": [
+    "Education"
+  ],
+  "author": "zjacobsdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zjacobsdev/pass-coda/issues"
+  },
+  "homepage": "https://github.com/zjacobsdev/pass-coda#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
