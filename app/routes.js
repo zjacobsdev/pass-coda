@@ -8,19 +8,12 @@ module.exports = function(app, passport, db) {
     });
 
     // PROFILE SECTION =========================
-    app.get('/profile', isLoggedIn, function(req, res) {
-      if(req.user.local.email){
-        //console.log(req.user.local)
-        db.collection('messages').find().toArray((err, result) => {
-          //console.log(result)
-          console.log(req)
-          if (err) return console.log(err)
-          res.render('profile.ejs', {
-            user: req.user,
-            messages: result
-          })
-        })
-      }
+    app.get('/sandbox', function(req, res) {
+      res.render('sandbox.ejs');
+    });
+
+    app.get('/educator', function(req, res) {
+      res.render('educator_profile');
     });
 
   //   app.get(`/profile${user.local.email}`, isLoggedIn, function(req, res) {

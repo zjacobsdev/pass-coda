@@ -1,25 +1,46 @@
 <!doctype html>
 <html>
 <head>
-    <title>21 Savage Fan Site</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <title>Student's Sandbox</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" /><!-- install through npm -->
+    <link rel="stylesheet" href="/code-mirror/lib/codemirror.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
+    <section class="container">
+    <section class="dashboard-container">
+        
+        <section>Project
+        </section>
+        <section>Tasks
+        </section>
+        <section>Contributors</section>
+        <section>Notes</section>
+    </section>
+    <section class="actions-container">
+        <button>Save</button>
+        <button>Commit (coming soon)</button>
+    </section>
+    <section class="editor-container">
 
-    <div class="jumbotron text-center">
-        <h1>21 Savage Fan Site</h1>
-        <img src="img/savage21.jpg" alt="21 Savage Profile Photo">
+        <textarea id="editor"></textarea>
+    </section>
+    <section class="details-container">
+    </section>
+    </section>
 
-        <p>Login or Signup:</p>
 
-        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>Login</a>
-        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Signup</a>
+    <script src="/code-mirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="/code-mirror/mode/javascript/javascript.js"></script>
 
-    </div>
-
-</div>
+    <script>
+        var myCodeMirror = CodeMirror.fromTextArea(document.querySelector('#editor'), {
+            lineNumbers: true,
+            mode: "javascript",
+            theme: 'monokai'
+        });
+    </script>
+    
 </body>
 </html>

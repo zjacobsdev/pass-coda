@@ -1,7 +1,86 @@
-body{
-  padding-top:80px;
-  word-wrap:break-word;
+*{
+  box-sizing: border-box;
+  /* border: 1px solid blue ; layout */
+
 }
-img{
-  height: 200px;
+
+html{
+  font-size: 10px;
+}
+body{
+  word-wrap:break-word;
+  margin: 10px;
+}
+:focus {
+  background: rgb(88, 82, 83);
+}
+
+.container{ 
+  display: grid;
+  grid-template-columns: 20vw 78vw;  /* change to fr instead of vh/vw */
+  grid-template-rows: 8vh 84vh 8vh;
+  grid-gap: 5px;
+  height: 100vh;
+
+}
+
+.dashboard-container{
+  background-color: brown;
+  padding: 5px;
+  grid-column: 1 ;
+  grid-row: 1 / 4;
+}
+.dashboard-container section{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  align-content: space-between;
+  background-color: yellow;
+  padding: 10px;
+  margin: 5px;
+  height: 50px;
+  font-size: 2rem;
+}
+.dashboard-container section::after{
+  position: absolute;
+  right: 10px;
+  font-family: 'Material Icons';
+  content:"\e5cf";
+  font-feature-settings: 'liga';
+  text-align: left;
+  font-size: 36px;
+}
+
+.dashboard-container section:hover::after{
+  /* need to use js for onclick event to animate */
+  background-color: rgb(201, 201, 6);
+  animation-name:slideInDown; 
+  animation-duration: 1s;
+  /* animation-iteration-count: infinite; */
+}
+.dashboard-container section:hover{
+  background-color: rgb(201, 201, 6);
+
+}
+
+.actions-container{
+  background-color: blueviolet;
+  text-align: right;
+    grid-column: 2 ;
+    grid-row: 1 ;
+
+}
+
+.editor-container{
+  background-color: black;
+  grid-column: 2 ;
+  grid-row: 2;
+
+}
+
+.details-container{
+  background-color: green;
+  grid-column: 2;
+  grid-row: 3;
 }
