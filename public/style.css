@@ -1,9 +1,10 @@
+/* DEV STYLES */
 *{
   box-sizing: border-box;
   /* border: 1px solid blue ; layout */
 
 }
-
+/* Site wide styles*/
 html{
   font-size: 10px;
 }
@@ -15,6 +16,23 @@ body{
   background: rgb(88, 82, 83);
 }
 
+
+/* Style for Landing page  */
+ .landing-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+ }
+
+ .landing-container h2{
+   color: blue;
+   display: inline-block;
+ }
+
+
+/* Style for sandbox.ejs  */
 .container{ 
   display: grid;
   grid-template-columns: 20vw 78vw;  /* change to fr instead of vh/vw */

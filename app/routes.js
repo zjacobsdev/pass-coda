@@ -13,7 +13,11 @@ module.exports = function(app, passport, db) {
     });
 
     app.get('/educator', function(req, res) {
-      res.render('educator_profile');
+      res.render('educator_profile.ejs');
+    });
+
+    app.get('/login-signup', function(req, res) {
+      res.render('login_signup.ejs');
     });
 
   //   app.get(`/profile${user.local.email}`, isLoggedIn, function(req, res) {
